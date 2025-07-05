@@ -13,4 +13,6 @@ Contents:
  - Font: PxPlus_IBM_VGA_8x16.ttf
  - Screenshots of setup
 
+If you use startx, add the line exec i3 to start it.
+
  
