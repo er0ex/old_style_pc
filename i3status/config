@@ -1,0 +1,73 @@
+general {
+    output_format = "i3bar"
+    colors = false
+    interval = 5
+}
+
+order += "ipv6"
+order += "tztime spacer"
+order += "disk /"
+order += "tztime spacer"
+order += "run_watch DHCP"
+order += "tztime spacer"
+order += "run_watch VPN"
+order += "tztime spacer"
+order += "wireless _first_"
+order += "tztime spacer"
+order += "ethernet _first_"
+order += "tztime spacer"
+order += "battery 0"
+order += "tztime spacer"
+order += "load"
+order += "tztime spacer"
+order += "cpu_usage"
+order += "tztime spacer"
+order += "tztime local"
+
+# Фейковый блок "spacer" для отступов
+tztime spacer {
+    format = "   "  # ← три пробела
+}
+
+wireless _first_ {
+    format_up = "W: %quality at %essid, %bitrate"
+    format_down = "W: down"
+}
+
+ethernet _first_ {
+    format_up = "E: %ip (%speed)"
+    format_down = "E: down"
+}
+
+battery 0 {
+    format = "BAT: %status %percentage %remaining"
+    # Если не работает, закомментируй path
+    # path = "/sys/class/power_supply/BAT0"
+    format_down = "No battery"
+    low_threshold = 10
+    threshold_type = "time"
+}
+
+disk "/" {
+    format = "DISK: %avail"
+}
+
+cpu_usage {
+    format = "CPU: %usage"
+}
+
+load {
+    format = "Load: %1min"
+}
+
+tztime local {
+    format = "%Y-%m-%d %H:%M:%S"
+}
+
+run_watch DHCP {
+    pidfile = "/var/run/dhclient*.pid"
+}
+
+run_watch VPN {
+    pidfile = "/var/run/vpnc/pid"
+}
