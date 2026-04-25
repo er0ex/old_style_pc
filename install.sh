@@ -15,7 +15,7 @@ cp fonts/*.ttf ~/.local/share/fonts/
 fc-cache -fv
 
 echo -e "${GREEN}[+] Installing alacritty settings...${NC}"
-mkdir -p ~/.config/allacritty/
+mkdir -p ~/.config/allacritty
 cp alacritty/alacritty.toml ~/.config/alacritty/alacritty.toml
 
 echo -e "${GREEN}[+] Installing i3 settings...${NC}"
