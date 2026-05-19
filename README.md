@@ -1,18 +1,30 @@
-#	Retro Linux Environment (IBM Style)
+# Retro Linux Environment (IBM Style)
 
-This is a minimalist retro-themed i3 setup inspired by early IBM systems.
+## About
+A minimalist retro-themed i3 setup inspired by early IBM systems.  
+This environment recreates the look and feel of classic IBM terminals with a clean, modern workflow.
 
-Main features:
- - Green monochrome font (IBM VGA 8x16)
- - Clean i3 configuration
- - Alacritty terminul with retro aesthetics
+---
 
-Contents: 
- - i3 config
- - Alacritty config
- - Font: PxPlus_IBM_VGA_8x16.ttf
- - Screenshots of setup
+## Features
+- Green monochrome font (**IBM VGA 8x16**)  
+- Clean and lightweight **i3 configuration**  
+- **Alacritty terminal** with retro aesthetics  
+- Included resources:
+  - i3 config
+  - Alacritty config
+  - Font: `PxPlus_IBM_VGA_8x16.ttf`
+  - Screenshots of the setup
 
-If you use startx, add the line exec i3 to start it.
+---
+
+## Installation
+You can install the environment using the built-in setup script provided in the repository.
+
+```bash
+git clone https://github.com/er0ex/old_style_pc.git
+cd old_style_pc
+./install.sh
+
 
  
